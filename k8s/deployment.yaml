@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: haingyen/frontend:latest
+        image: haingyen/frontend:61b3f428e68c98910b7b9bba59d0efb2d8773074
         ports:
         - containerPort: 80
       - name: backend
-        image: haingyen/backend:latest
+        image: haingyen/backend:61b3f428e68c98910b7b9bba59d0efb2d8773074
         ports:
         - containerPort: 5001
