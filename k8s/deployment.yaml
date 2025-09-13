@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todox-deployment
+  labels:
+    app: todox
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: todox
+  template:
+    metadata:
+      labels:
+        app: todox
+    spec:
+      containers:
+      - name: frontend
+        image: haingyen/frontend:latest
+        ports:
+        - containerPort: 80
+      - name: backend
+        image: haingyen/backend:latest
+        ports:
+        - containerPort: 5001
