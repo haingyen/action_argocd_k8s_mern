@@ -57,4 +57,4 @@ jobs:
         kubeconfig: ${{ secrets.KUBECONFIG }}  
 
     - name: Deploy ArgoCD Application
-      run: kubectl apply -f argocd/application.yaml
+      run: kubectl apply -f argocd/application.yaml --validate=false
