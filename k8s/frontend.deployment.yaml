@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: haingyen/frontend:e70ab3fb077fea30d217de81a75bf399d719d744
+        image: haingyen/frontend:b299a4e30700e2f1892a0a3475a65b40a7bd1457
         ports:
         - containerPort: 80
 ---
