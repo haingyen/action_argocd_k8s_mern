@@ -42,8 +42,6 @@ jobs:
         git add k8s/deployment.yaml
         git commit -m "Update images to ${{ github.sha }}"
         git push
-
-jobs:
   deploy:
     runs-on: ubuntu-latest
     # environment: production
