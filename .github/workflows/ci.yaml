@@ -56,8 +56,5 @@ jobs:
         version: 'latest'  
         kubeconfig: ${{ secrets.KUBECONFIG }}  
 
-    - name: Verify cluster access
-      run: kubectl cluster-info
-
     - name: Deploy ArgoCD Application
       run: kubectl apply -f argocd/application.yaml
