@@ -42,19 +42,3 @@ jobs:
         git add k8s/*.yaml
         git commit -m "Update images to ${{ github.sha }}"
         git push
-  deploy:
-    runs-on: ubuntu-latest
-    # environment: production
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Setup Kubernetes
-      uses: azure/setup-kubectl@v3
-      with:
-        version: 'latest'  
-        kubeconfig: ${{ secrets.KUBECONFIG }}  
-
-    - name: Deploy ArgoCD Application
-      run: kubectl apply -f argocd/application.yaml --validate=false
