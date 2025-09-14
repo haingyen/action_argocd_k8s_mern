@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: haingyen/backend:b299a4e30700e2f1892a0a3475a65b40a7bd1457
+        image: haingyen/backend:12f0dfee92f5d561d9fcbb973459ace650f81d8b
         ports:
         - containerPort: 5001
         env:
